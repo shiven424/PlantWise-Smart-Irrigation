@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Plant Smart</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="plant_category">Plant Category</string>
+    <string name="environment">Environment</string>
+    <string name="save_profile">Save Profile</string>
+
+    <string name="humidity">Humidity</string>
+    <string name="soil_moisture">Soil Moisture</string>
+    <string name="brightness">Brightness</string>
+
+    <string name="watering_threshold">Watering Threshold</string>
+    <string name="watering_mode">Watering Mode</string>
+    <string name="auto_mode">Auto Mode</string>
+    <string name="manual_mode">Manual Mode</string>
+    <string name="toggle_pump">Pump ON/OFF</string>
+
+    <string name="profile">Profile</string>
+    <string name="plant_profile">Plant Profile</string>
+    <string name="history">History</string>
+    <string name="logout">Logout</string>
+
+    <string name="create_account">Create Account</string>
+    <string name="register">Register</string>
+    <string name="invalid_credentials">Invalid credentials</string>
+    <string name="registered_successfully">Registered successfully</string>
+    <string name="profile_saved">Plant profile saved</string>
+
+    <string name="watering_started">Watering Started</string>
+    <string name="watering_done">Watering Completed</string>
+
+    <string name="sensor_values">Sensor Values</string>
+    <string-array name="plant_categories">
+        <item>Succulent</item>
+        <item>Foliage</item>
+        <item>Flowering</item>
+        <item>Fern</item>
+        <item>Herb</item>
+    </string-array>
+
+    <string-array name="plant_environments">
+        <item>Indoor</item>
+        <item>Outdoor</item>
+    </string-array>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+
+</resources>
+

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.plant_smart">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+
+    <application
+        android:name=".MyApp"  android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher_background"
+        android:roundIcon="@drawable/ic_launcher_background"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Plant_smart"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        tools:targetApi="31">
+
+        <activity android:name=".activities.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.SignupActivity" android:exported="true"/>
+        <activity android:name=".activities.DashboardActivity" android:exported="true"/>
+        <activity android:name=".activities.ImageViewActivity" android:exported="true"/>
+        <activity android:name=".activities.HistoryActivity" android:exported="true"/>
+        <activity android:name=".activities.PlantProfileActivity" android:exported="true"/>
+        <activity android:name=".activities.ProfileActivity" android:exported="true"/>
+        <service android:name="info.mqtt.android.service.MqttService"
+            android:exported="false"
+            tools:node="merge"/>
+
+    </application>
+</manifest>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<manifest xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    package="com.example.plant_smart">-->
+
+<!--    &lt;!&ndash; Permissions &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.INTERNET"/>-->
+<!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+<!--    <uses-permission android:name="android.permission.WAKE_LOCK"/>-->
+
+<!--    <application-->
+<!--        android:allowBackup="true"-->
+<!--        android:dataExtractionRules="@xml/data_extraction_rules"-->
+<!--        android:fullBackupContent="@xml/backup_rules"-->
+<!--        android:icon="@drawable/ic_launcher_background"-->
+<!--        android:label="@string/app_name"-->
+<!--        android:roundIcon="@drawable/ic_launcher_background"-->
+<!--        android:supportsRtl="true"-->
+<!--        android:theme="@style/Theme.Plant_smart"-->
+<!--        tools:targetApi="31">-->
+
+<!--        &lt;!&ndash; Main Activity &ndash;&gt;-->
+<!--        <activity android:name=".activities.LoginActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN"/>-->
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+<!--        &lt;!&ndash; Signup Activity &ndash;&gt;-->
+<!--        <activity android:name=".activities.SignupActivity" android:exported="true"/>-->
+
+<!--        &lt;!&ndash; Dashboard Activity &ndash;&gt;-->
+<!--        <activity android:name=".activities.DashboardActivity" android:exported="true"/>-->
+
+<!--        &lt;!&ndash; History Activity &ndash;&gt;-->
+<!--        <activity android:name=".activities.HistoryActivity" android:exported="true"/>-->
+
+<!--        &lt;!&ndash; Plant Profile Activity &ndash;&gt;-->
+<!--        <activity android:name=".activities.PlantProfileActivity" android:exported="true"/>-->
+
+<!--        &lt;!&ndash; Profile Activity &ndash;&gt;-->
+<!--        <activity android:name=".activities.ProfileActivity" android:exported="true"/>-->
+
+<!--        &lt;!&ndash; MQTT Service (Non-exported) &ndash;&gt;-->
+<!--&lt;!&ndash;        <service&ndash;&gt;-->
+<!--&lt;!&ndash;            android:name="org.eclipse.paho.android.service.MqttService"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:exported="false"&ndash;&gt;-->
+<!--&lt;!&ndash;            tools:node="replace" />&ndash;&gt;-->
+
+<!--        &lt;!&ndash; MQTT Alarm Receiver (Non-exported) &ndash;&gt;-->
+
+
+<!--    </application>-->
+<!--</manifest>-->

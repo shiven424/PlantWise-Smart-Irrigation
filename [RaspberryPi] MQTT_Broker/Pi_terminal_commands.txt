@@ -1,0 +1,52 @@
+Raspberry Pi Terminal commands to run the Watering_Start MQTT topic from notification to send the latest image of plant to the Android.
+And to run our mosquitto mqtt with the config we defined (mosquitto.conf)
+
+
+
+
+---------- To Update the config file --------
+
+sudo systemctl stop mosquitto
+
+# Backup the existing config just in case
+sudo mv /etc/mosquitto/mosquitto.conf /etc/mosquitto/mosquitto.conf.bak
+
+# Deploy your new config (for example, copy in from /home/pi/)
+sudo cp /home/pi/mosquitto.conf /etc/mosquitto/mosquitto.conf
+
+
+-- Commands to run (only 2 needed after everything is done) --
+
+sudo systemctl stop mosquitto
+mosquitto -c /etc/mosquitto/mosquitto.conf -v
+
+
+# Run the Pi Cam logic for image capture and transmission to android
+cd /home/pi/plantwise_cam 
+./mqtt_cam.py
+
+
+
+---- Extras ----
+
+# Stop the Mosquitto service
+sudo systemctl stop mosquitto
+
+# Restart the Mosquitto service
+sudo systemctl restart mosquitto
+
+# Enable Mosquitto to start on boot (if previously disabled)
+sudo systemctl enable mosquitto
+
+# Start the Mosquitto service
+sudo systemctl start mosquitto
+
+# Run Mosquitto manually with a specific config file in verbose mode
+# Make sure this is used only when the mosquitto service is stopped
+mosquitto -c /etc/mosquitto/mosquitto.conf -v
+
+
+
+--- Camera ---
+
+To setup camera do some research, we will have to add some line of codes in a system config file to define our camera version.
